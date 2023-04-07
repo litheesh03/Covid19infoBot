@@ -29,15 +29,41 @@ def welcome():
                         body {
                         background-image: url("https://image.freepik.com/free-vector/stay-home-stop-coronavirus-design-with-falling-covid-19-virus-abstract-house-light-background_1314-2679.jpg");
                         }
+                        .df-messenger {
+                          position: absolute;
+                          top: 57%;
+                          left: 53%;
+                          transform: translate(-50%, -50%);
                         }
+
+                        /* Increase the size of the chat icon */
+                       df-messenger .df-messenger-icon {
+                         width: 40px;
+                         height: 40px;
+                        }
+
+                        /* Add a hover effect to the chat icon */
+                        df-messenger .df-messenger-icon:hover {
+                          opacity: 0.8;
+                          cursor: pointer;
+                          transform: scale(1.1);
+                          transition: all 0.2s ease-in-out;
+                        }
+                    }
+
+               .df-messenger-icon-image {
+                  width: 500%;
+                  height: 600%;
+                }
             </style>
         </head>
-    <body> 
+    <body class="df-messenger"> 
 
         <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
         <df-messenger
         intent="WELCOME"
         chat-title="Covid19_Cases_Info"
+        chat-icon="https://veloxac.com/wp-content/uploads/coronavirus.png" 
         allow="microphone;"
         agent-id="16f85c0e-f3bb-47e0-8883-7faf10beffd8"
         language-code="en"
